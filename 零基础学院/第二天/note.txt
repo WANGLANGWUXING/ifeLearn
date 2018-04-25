@@ -1,4 +1,8 @@
-日期：2018年4月24日
+日期：2018年4月25日
 学时：30分钟
-目标：创建 github 仓库，提交笔记
-      达成
+目标：使用codepen编写一个简单的在线笔记
+
+https://codepen.io/wuxin_coder/pen/deXzYj
+
+
+
