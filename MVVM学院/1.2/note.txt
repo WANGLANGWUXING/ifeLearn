@@ -1,3 +1,5 @@
 日期：2018年4月25日 
 学时：3小时 
 目标：使用 parcel 快速搭建开发 san helloworld
+
+命令 parcel index.html
