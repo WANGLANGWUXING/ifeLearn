@@ -9337,26 +9337,34 @@ var _san2 = _interopRequireDefault(_san);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var MyApp = san.defineComponent({
-   template: '<div><div>' + '<input type="" name="name" value="{=name=}" placeholder="姓名（string）">' + '<input type="number" name="name" value="{= age =}" placeholder="年龄（number）">' + '<input type="" name="name" value="{=des=}" placeholder="简介"></div>' + '<div><p>信息：</p><button on-click="reset">移除信息</button></div>' + '<div><label>姓名：</label><p class="show">{{name}}</p></div>' + '<div><label>年龄：</label><p class="show">{{age}}</p></div>' + '<div><label>简介：</label><p class="show">{{des}}</p></div>' + '</div>',
+   template: '<div><div>' + '<input type="" name="name" value="{=name=}" placeholder="姓名（string）">' + '<input type="number" name="name" value="{= ageStr =}" placeholder="年龄（number）">' + '<input type="" name="name" value="{=des=}" placeholder="简介"></div>' + '<div><p>信息：</p><button on-click="reset">移除信息</button></div>' + '<div><label>姓名：</label><p class="show">{{name}}</p></div>' + '<div><label>年龄：</label><p class="show">{{age}}</p></div>' + '<div><label>简介：</label><p class="show">{{des}}</p></div>' + '</div>',
    /*数据*/
    initData: function initData() {
       return {
          name: '',
-         age: 0,
+         ageStr: '',
          des: ''
       };
    },
    /*数据类型校验*/
    dataTypes: {
       name: _san.DataTypes.string,
-      age: _san.DataTypes.number,
+      ageStr: _san.DataTypes.string,
       des: _san.DataTypes.string
    },
    /*点击事件*/
    reset: function reset() {
       this.data.set('name', '');
-      this.data.set('age', 0);
+      this.data.set('ageStr', '');
       this.data.set('des', '');
+   },
+   /**/
+   computed: {
+      age: function age() {
+         var age = this.data.get("ageStr");
+         var number = parseInt(age, 10);
+         return isNaN(number) ? "" : number;
+      }
    }
 });
 
@@ -9392,7 +9400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '28253' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '33286' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
