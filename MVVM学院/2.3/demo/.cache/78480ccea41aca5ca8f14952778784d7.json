@@ -1,0 +1,1 @@
+{"dependencies":[{"name":"_css_loader"}],"generated":{"css":"table{\r\n\tborder-collapse:collapse;\r\n}\r\ntd{\r\n\tborder: 1px solid #666;\r\n\tpadding: 10px 20px;\r\n}\r\n","js":"\n        var reloadCSS = require('_css_loader');\n        module.hot.dispose(reloadCSS);\n        module.hot.accept(reloadCSS);\n      "},"hash":"dfddeb283612c5fd5f0399ec0edf0cd7","cacheData":{}}

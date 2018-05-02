@@ -1,0 +1,13 @@
+在项目源代码页面链接前缀那加上http://htmlpreview.github.com/?
+举个栗子:
+需要打开的项目页面https://github.com/aisinvon/aisinvon.github.io/blob/master/index.html
+给加上前缀http://htmlpreview.github.com/?
+最终链接http://htmlpreview.github.io/?https://github.com/aisinvon/aisinvon.github.io/blob/master/index.html
+
+
+作者：Vodka Zheng
+
+链接：https://www.zhihu.com/question/24156818/answer/35181447
+
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
