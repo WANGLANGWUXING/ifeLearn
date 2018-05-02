@@ -1,0 +1,13 @@
+input{
+	margin: 10px 3px;
+	height: 30px;
+	outline: none;
+	padding: 8px;
+}
+p{
+	display: inline;
+}
+
+.show{
+	text-decoration: underline;
+}

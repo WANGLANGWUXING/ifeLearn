@@ -1,0 +1,46 @@
+html body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	display: table;
+}
+.title{
+	background-color: #3f8ef9;
+	width: 200px;
+	min-height: 726px;
+	text-align: center;
+}
+.title h1{
+	margin: 0;
+	padding-top: 100px;
+	color: white;
+}
+.title{
+	float: left;
+}
+.content{
+	float: left;
+	padding-left: 15px;
+}
+
+.item{
+	font-weight: bold;
+	padding-right: 5px;
+}
+.base-info-items{
+	width: 100%;
+	min-height:30px;
+}
+.base-info-item{
+	min-width: 70px;
+	padding:5px 50px 5px 0px;
+	float: left;
+}
+.power-info-items .power-info-item label{
+	display: block;
+}
+.power-info-item{
+	padding-bottom: 10px;
+}
