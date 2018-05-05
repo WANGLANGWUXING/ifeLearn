@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		html,body{
+			width: 100%;
+			margin: 0;
+		}
+		div{
+			-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+       		box-sizing: border-box;
+		}
+		.content{
+			height: 200px;
+			margin-bottom: 10px;
+		}
+		.fl{
+			float: left;
+			height: 200px;
+		}
+		
+		.brw2{
+			background: red;
+			width: 200px;
+			
+		}
+		.byw2{
+			background: yellow;
+			width: 200px;
+			
+		}
+		.bbw2{
+			background: blue;
+			width: calc(100% - 400px);
+			
+		}
+		.content-position{
+			position: relative;
+		}
+		.pa{
+			position: absolute;
+			height: 200px;
+		}
+		.content-position-main{
+			left: 200px;
+		}
+		.content-position-right{
+			left: 400px;
+		}
+		.content-flexbox{
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<div class="content-float content">
+		<div class="content-float-left fl brw2">float</div>
+		<div class="content-float-main fl byw2"></div>
+		<div class="content-float-right fl bbw2"></div>
+	</div>
+	<div class="content-position content">
+		<div class="content-position-left brw2 pa">绝对定位法</div>
+		<div class="content-position-main byw2 pa"></div>
+		<div class="content-position-right bbw2 pa"></div>
+	</div>
+	<div class="content-flexbox content">
+		<div class="content-flexbox-left  brw2">flexbox</div>
+		<div class="content-flexbox-main  byw2"></div>
+		<div class="content-flexbox-right  bbw2"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			height: 100%;
+		}
+		div{
+			-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+       		box-sizing: border-box;	
+		}
+		.content-position,.content-margin,.content-flexbox{
+			height: 200px;
+			margin-bottom: 20px;
+		}
+		.content-position-left,
+		.content-position-right{
+			position: absolute;
+			top: 0;
+			width: 200px;
+			height: 200px;
+		}
+		.content-position-left{
+			left: 0;
+			background: blue;
+		}
+		.content-position-right{
+			right: 0;
+			background: blue;
+		}
+		.content-position-main{
+			margin: 0 200px;
+			height: 100%;
+			background: red;
+		}
+		.content-margin-main{
+			width: 100%;
+			height: 200px;
+			float: left;
+		}
+		.content-margin-main .content-margin-body{
+			margin: 0 200px;
+			background: red;
+			height: 100%;
+		}
+		.content-margin-left,
+		.content-margin-right{
+			width: 200px;
+			height: 100%;
+			float: left;
+			background: blue;
+		}
+		.content-margin-left{
+			margin-left: -100%;
+		}
+		.content-margin-right{
+			margin-left: -200px;
+		}
+		.content-flexbox{
+			display: flex;
+		}
+		.content-flexbox-left,
+		.content-flexbox-right{
+			background: blue;
+			width: 200px;
+		}
+		.content-flexbox-main{
+			background: red;
+			width: calc(100% - 400px);
+		}
+	</style>
+</head>
+<body>
+	<!-- 绝对定位法 -->
+	<div class="content-position">
+		<div class="content-position-left">绝对定位法</div>
+		<div class="content-position-main"></div>
+		<div class="content-position-right"></div>
+	</div>
+	<!-- margin负值法 -->
+	<div class="content-margin">
+		<div class="content-margin-main">
+			<div class="content-margin-body"></div>
+		</div>
+		<div class="content-margin-left">margin负值法</div>
+		
+		<div class="content-margin-right"></div>
+	</div>
+	<!-- flexbox -->
+	<div class="content-flexbox">
+		<div class="content-flexbox-left">flexbox</div>
+		<div class="content-flexbox-main"></div>
+		<div class="content-flexbox-right"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		div{
+			-webkit-box-sizing: border-box;
+    		-moz-box-sizing: border-box;
+       		box-sizing: border-box;
+       		border: 2px solid #666;
+		}
+		html,body{
+			width: 100%;
+			margin: 0;
+		}
+		.content,.left-sider,
+		.right-sider,.left-sider-position,
+		.right-sider-position,.content-flexbox,
+		.left-sider-flexbox,.right-sider-flexbox{
+			height: 200px;
+		}
+		.left-sider,.right-sider{
+			float: left;
+		}
+		.left-sider,.left-sider-position,.left-sider-flexbox{
+			width: 30%;
+			background: blue;
+		}
+		.right-sider,.right-sider-position,.right-sider-flexbox{
+			width: 70%;
+			background: yellow;
+		}
+		.content-position{
+			position: relative;
+			height: 200px
+		}
+		.left-sider-position{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.right-sider-position{
+			position: absolute;
+			top: 0;
+			left: 30%;
+		}
+		.content-flexbox{
+			display: flex;
+		}
+		.left-sider-flexbox,.right-sider-flexbox{
+
+		}
+	</style>
+</head>
+<body>
+	<!-- Float 布局-->
+	<div class="content">
+		<div class="left-sider">Float布局</div>
+		<div class="right-sider"></div>
+	</div>
+	<!-- Position 布局-->
+	<div class="content-position">
+		<div class="left-sider-position">Position布局</div>
+		<div class="right-sider-position"></div>
+	</div>
+	<!-- Flexbox 布局-->
+	<div class="content-flexbox">
+		<div class="left-sider-flexbox">Flexbox 布局</div>
+		<div class="right-sider-flexbox">
+			
+		</div>
+	</div>
+</body>
+</html>
