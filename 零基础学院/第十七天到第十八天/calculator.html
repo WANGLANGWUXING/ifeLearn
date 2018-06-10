@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IFE ECMAScript</title>
+</head>
+
+<body>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var first_number = 0;
+        var second_number = 0;
+
+        function init() {
+            first_number = document.getElementById("first-number").value;
+            second_number = document.getElementById("second-number").value;
+            if(!isNumber(first_number)){
+                console.log("第一个数字非法")
+            }
+            if(!isNumber(second_number)){
+                console.log("第二个数字非法")
+            }
+        }
+
+        function isNumber(val) {
+            var regPos = /^\d+(\.\d+)?$/; //非负浮点数
+            var regNeg = /^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$/; //负浮点数
+            if (regPos.test(val) || regNeg.test(val)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        document.getElementById("add-btn").onclick = function () {
+            init();
+            document.getElementById("result").innerHTML = Number(first_number) + Number(second_number);
+        };
+        document.getElementById("minus-btn").onclick = function () {
+            init();
+            document.getElementById("result").innerHTML = Number(first_number) - Number(second_number);
+        };
+        document.getElementById("times-btn").onclick = function () {
+            init();
+            document.getElementById("result").innerHTML = Number(first_number) * Number(second_number);
+        };
+        document.getElementById("divide-btn").onclick = function () {
+            init();
+            if(second_number==0){
+                console.log("除数为0")
+            }
+            document.getElementById("result").innerHTML = Number(first_number) / Number(second_number);
+        };
+    </script>
+</body>
+
+</html>
